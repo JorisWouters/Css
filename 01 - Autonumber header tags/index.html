@@ -1,0 +1,38 @@
+
+<html>
+    <head>
+        <style>
+            #page {
+                counter-reset: heading;
+            }
+
+            h1:before {
+                content: counter(heading)") ";
+                counter-increment: heading;
+            }
+
+            h1 {
+                counter-reset: subheading;
+            }
+
+            h2:before {
+                content: counter(heading)"." counter(subheading)") ";
+                counter-increment: subheading;
+            }
+            body{
+                font-family: courier new;
+            }        
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <h1>Chapter 1</h1>
+            <h2>Chapter 1.1</h2>
+            <h2>Chapter 1.2</h2>
+            <h1>Chapter 2</h1>
+            <h2>Chapter 2.1</h2>
+            <h1>Chapter 3</h1>
+        </div>
+    </body>
+
+</html>
